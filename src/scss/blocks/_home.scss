@@ -1,0 +1,90 @@
+.home {
+	padding: 52px 0rem 0rem 0rem;
+	width: 100vw;
+	height: 100vh;
+	background: url("../img/home/home-bg.jpg") center center / cover no-repeat;
+	&__wrapper {
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		color: $colorWhite;
+		font-family: $fontFamilyTitle;
+		text-align: center;
+	}
+	&__title {
+		font-size: 3.875rem;
+		margin: 0rem 0rem 0.6rem 0rem;
+	}
+	&__info {
+		font-weight: 100;
+		font-size: 3rem;
+		line-height: 3rem;
+		margin: 0rem 0rem 1.6rem 0rem;
+		& > span {
+			color: $titleColor;
+		}
+	}
+	&__text {
+		font-weight: 100;
+		font-size: 1.125rem;
+		line-height: 1.6rem;
+		position: relative;
+		margin: 0rem 0rem 20vh 0rem;
+		&:before,
+		&:after {
+			content: "";
+			position: absolute;
+			width: 1.75rem;
+			height: 1px;
+			background: $titleColor;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		&:before {
+			left: -4rem;
+		}
+		&:after {
+			right: -4rem;
+		}
+	}
+	&__social {
+		display: flex;
+		a {
+			margin: 0rem 0.6rem;
+			svg {
+				height: 1.3rem;
+				fill: rgba(255, 255, 255, 0.4);
+				transition: all 0.4s ease 0s;
+			}
+			&:hover svg {
+				fill: $colorWhite;
+			}
+		}
+	}
+	@media (max-width: $md4 + px) {
+		&__title {
+			font-size: 3.4rem;
+		}
+		&__info {
+			font-size: 2rem;
+			line-height: 2.1rem;
+		}
+		&__text {
+			font-size: 1rem;
+			&:before {
+				left: -2.5rem;
+			}
+			&:after {
+				right: -2.5rem;
+			}
+		}
+	}
+	@media (max-height: 410px) {
+		padding: 0;
+		&__text {
+			margin: 0rem 0rem 5vh 0rem;
+		}
+	}
+}

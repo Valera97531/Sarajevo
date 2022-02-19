@@ -1,0 +1,43 @@
+@import "reset";
+@import "fonts";
+@import "base/var";
+
+@import "blocks/blocks";
+
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 6rem;
+}
+
+body {
+	font-family: $fontFamilyMain;
+	&._lock {
+		overflow: hidden;
+	}
+}
+
+.wrapper {
+	overflow: hidden;
+	min-height: 100%;
+}
+
+.page {
+	display: flex;
+	flex-direction: column;
+}
+
+.content {
+	flex: 1 0 100vh;
+}
+
+.container {
+	max-width: $maxWidthContainer + px;
+	margin: 0 auto;
+	padding: 0px 15px;
+}
+
+@import "blocks/header";
+@import "blocks/home";
+@import "blocks/features";
+
+@import "blocks/footer";

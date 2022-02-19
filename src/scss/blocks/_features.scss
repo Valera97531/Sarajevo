@@ -1,0 +1,38 @@
+.features {
+	padding: 4.7rem 0rem 0rem 0rem;
+	background: #efefef;
+	&__inner {
+		padding: 0rem 0rem 8.437rem 0rem;
+	}
+	&__row {
+		display: flex;
+		column-gap: 2.1rem;
+		margin: 4.69rem 0rem 0rem 0rem;
+	}
+	&__item {
+		flex: 0 1 33.33333%;
+	}
+	@media (max-width: 860px) {
+		&__row {
+			flex-wrap: wrap;
+			row-gap: 1.5rem;
+		}
+		&__item {
+			flex: 0 1 calc(50% - 2.1rem);
+		}
+	}
+	@media (max-width: 670px) {
+		&__row {
+			column-gap: 0;
+		}
+		&__item {
+			flex: 0 1 100%;
+		}
+	}
+	@media (max-width: $md4 + px) {
+		padding: 3rem 0rem 0rem 0rem;
+		&__row {
+			margin: 3rem 0rem 0rem 0rem;
+		}
+	}
+}
